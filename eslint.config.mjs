@@ -10,6 +10,7 @@ export default tseslint.config(
 	{
 		rules: {
 			'@typescript-eslint/no-unused-vars': 'off',
+			'@typescript-eslint/prefer-for-of': 'off',
 		},
 	},
 );
