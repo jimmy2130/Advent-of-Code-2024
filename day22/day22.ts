@@ -53,13 +53,9 @@ function part2(input: number[]) {
 			ansMap.set(encodedNum, (ansMap.get(encodedNum) ?? 0) + priceArr[j + 3]);
 		}
 	}
-	let maxKey = -1;
 	let maxValue = 0;
-	ansMap.forEach((value, key) => {
-		if (value > maxValue) {
-			maxValue = value;
-			maxKey = key;
-		}
+	ansMap.forEach(value => {
+		maxValue = Math.max(maxValue, value);
 	});
 	return maxValue;
 }
